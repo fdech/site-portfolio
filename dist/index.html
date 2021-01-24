@@ -145,7 +145,8 @@
                             <div class="">
                                 <h3 class="title title_fz14">Адаптивная верстка</h3>
                                 <p class="about__skill-text">
-                                    Адаптивная верстка является одним из главных атрибутов хорошего сайта. Без адаптива далеко не уйдёшь.
+                                    Адаптивная верстка является одним из главных атрибутов хорошего сайта. Огромное количество людей сидят в интернете с мобильных телефонов
+                                    каждый день и нужно сделать так, чтобы ему было удобно находится на сайте.
                                 </p>
                             </div>
                         </div>
@@ -192,7 +193,7 @@
                                         <div class="resume__item-location">Огромное количество различного материала и курсов</div>
                                     </div>
                                     <div class="resume__item-body">
-                                        Благодаря интернету, моему упорству и желанию я смог найти всю необходимую информацию и прикладиваю все усилия для её изучения. 
+                                        Благодаря интернету, моему упорству и желанию я смог найти всю необходимую информацию и прикладываю все усилия для её изучения. 
                                         
                                     </div>
                                 </div>
@@ -286,22 +287,58 @@
 
                 <div class="portfolio__wrapper">
                     <a href="http://pc-master-khv.ru" class="portfolio__item">
-                        <img src="img/works/pc-master.jpg" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/pc-master.jpg" alt="uber">
+                        </div>
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">PC-master-khv.ru</div>
+                            <div class="portfolio__containing-descr">Сайт частного хабаровского мастера по ремонту компьютеров</div>
+                        </div>
                     </a>
                     <a href="#" class="portfolio__item">
-                        <img src="img/works/empty.png" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/empty.png" alt="uber">
+                        </div>
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">Будущая работа</div>
+                            <div class="portfolio__containing-descr">Скоро будет</div>
+                        </div>
                     </a>
                     <a href="#" class="portfolio__item">
-                        <img src="img/works/empty.png" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/empty.png" alt="uber">
+                        </div>
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">Будущая работа</div>
+                            <div class="portfolio__containing-descr">Скоро будет</div>
+                        </div>
                     </a>
                     <a href="#" class="portfolio__item vertical">
-                        <img src="img/works/empty-height.png" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/empty-height.png" alt="uber">
+                        </div>
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">Будущая работа</div>
+                            <div class="portfolio__containing-descr">Скоро будет</div>
+                        </div>
                     </a>
                     <a href="#" class="portfolio__item">
-                        <img src="img/works/empty.png" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/empty.png" alt="uber">
+                        </div>
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">Будущая работа</div>
+                            <div class="portfolio__containing-descr">Скоро будет</div>
+                        </div>
                     </a>
                     <a href="#" class="portfolio__item horizontal">
-                        <img src="img/works/empty-width.png" alt="uber">
+                        <div class="portfolio__img">
+                            <img src="img/works/empty-width.png" alt="uber">
+                        </div>    
+                        <div class="portfolio__containing">
+                            <div class="portfolio__containing-link">Будущая работа</div>
+                            <div class="portfolio__containing-descr">Скоро будет</div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -332,7 +369,7 @@
                             Или оставьте ваши контакты и я свяжусь с вами:
                         </div>
 
-                        <form action="post.php" method="POST" class="contacts__form">
+                        <form action="main.php" method="POST" class="contacts__form" id='contacts__form'>
                             <div class="contacts__input">
                                 <input required name="name" id="name" type="text">
                                 <label for="name">Ваше имя</label>
@@ -346,7 +383,7 @@
                                 <label for="message">Ваше сообщение</label>
                             </div>
                             <div class="contacts__triggers">
-                                <button class="contacts__btn btn">Отправить сообщение</button>
+                                <button class="contacts__btn btn" id="submit">Отправить сообщение</button>
                                 <div class="contacts__policy">
                                     <input required type="checkbox">
                                     
@@ -364,7 +401,45 @@
         </section>
         <!-- end contacts section -->
     </main>
-    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    
+    <script>
+        $(function(){
+            $('#contacts__form').submit(function(e){
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'POST',
+                    data: data,
+                    beforeSend: function(){
+                        $('#submit').next().text('Отправляю...');
+                    },
+                    success: function(res){
+                        $('#contacts__form').find('input').val('');
+                        $('#submit').next().html(res);
+                    },
+                    error: function(){
+                        alert('Ошибка!');
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(71463319, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/71463319" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 </body>
 </html>

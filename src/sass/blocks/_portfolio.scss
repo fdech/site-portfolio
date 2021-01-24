@@ -37,14 +37,54 @@
 }
 
 .portfolio__item {
-    transition: all 0.4s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        .portfolio__img{
+            filter: grayscale(50%) blur(1px) sepia(10%) opacity(60%);
+            transform: scale(1.1);
+            transition: all 0.6s;
+        }
+        .portfolio__containing {
+            background-color: rgba($color: $main-color, $alpha: .7);
+            transition: all 0.6s;
+            top: 0;
+            opacity: 1;
+        }
+    }
+}
+
+.portfolio__img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    &:hover {
-        // transform: scale(1.05);
-        filter: grayscale(50%) blur(1px);
+}
+
+.portfolio__containing {
+    display: block;
+    position: absolute;
+    top: -200px;
+    opacity: 1;
+    padding: 40px 20px 0;
+    text-align: center;
+    color: #000000;
+    transition: all 0.6s;
+    width: 100%;
+    height: 100%;
+    &-link {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    &-descr {
+        margin-top: 10px;
+        font-size: 18px;
     }
 }
