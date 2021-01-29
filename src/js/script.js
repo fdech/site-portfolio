@@ -18,4 +18,14 @@ menuLink.forEach(element => {
     });
 });
 
- 
+new WOW().init();
+
+//scroll and pageup jQuery
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn(); 
+    } else {
+        $('.pageup').fadeOut(); 
+    }
+});

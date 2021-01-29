@@ -110,9 +110,7 @@
         &__photo {
             display: none;
         }
-        &__title {
-            
-        }
+
     }
 
 }
@@ -244,5 +242,10 @@
             column-gap: unset;
             row-gap: 20px;
         }
+    }
+
+    .pageup {
+        right: 20px;
+        bottom: 20px;
     }
 }

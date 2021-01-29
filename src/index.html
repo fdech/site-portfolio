@@ -39,13 +39,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/favicon//ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <aside class="sidepanel">
         <a href="https://www.facebook.com/altx.fdech.9" class="sidepanel__link"><img src="icons/social/facebook.svg" alt="fb"></a>
-        <a href="https://www.instagram.com/altxfdech/" class="sidepanel__link"><img src="icons/social/instagram.svg"" alt="instagram"></a>
+        <a href="https://www.instagram.com/altxfdech/" class="sidepanel__link"><img src="icons/social/instagram.svg" alt="instagram"></a>
         <a href="https://github.com/fdech" class="sidepanel__link"><img src="icons/social/github.svg" alt="github"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Социальные сети</span></div>
@@ -77,14 +77,14 @@
         <div class="menu__overlay"></div>
     </div>
     <!-- start promo section -->
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="hamburger">
             <span></span>
             <span class="long"></span>
             <span></span>
         </div>
         
-        <div class="container">
+        <div class="container animate__animated animate__fadeInLeft wow">
             <div class="title title_fz18 promo__subtitle">Меня зовут Александр Дергунов</div>
             <h1 class="title title_fz48 promo__title">
                 Я web-разработчик <br>
@@ -105,10 +105,10 @@
         <section class="about" id="about">
             <div class="container">
                 <div class="about__wrapper">
-                    <div class="about__photo">
+                    <div class="about__photo animate__animated animate__fadeInLeft wow">
                         <img src="img/sanya-3.jpg" alt="photo">
                     </div>
-                    <div class="about__descr">
+                    <div class="about__descr animate__animated animate__fadeInRight wow">
                         <h2 class="title title_fz18 about__title">
                             Про меня
                         </h2>
@@ -120,7 +120,7 @@
                             работаю в приятной компании.
                         </p>
                     </div>
-                    <div class="about__skills">
+                    <div class="about__skills animate__animated animate__fadeInRight wow">
                         <div class="about__skills-item">
                             <div class=""><img src="icons/about_me/web_development.svg" alt="web-dev"></div>
                             <div class="">
@@ -158,12 +158,14 @@
         <!-- start resume section -->
         <section class="resume" id="resume">
             <div class="container">
-                <h2 class="title title_fz18 resume__title">Опыт</h2>
-                <div class="title title_fz36 resume__subtitle">Моё образование и опыт</div>
-                <div class="divider"></div>
-
+                <div class="animate__animated animate__fadeInUp wow">
+                    <h2 class="title title_fz18 resume__title">Опыт</h2>
+                    <div class="title title_fz36 resume__subtitle">Моё образование и опыт</div>
+                    <div class="divider"></div>
+                </div>
+                
                 <div class="resume__wrapper">
-                    <div class="resume__column">
+                    <div class="resume__column animate__animated animate__fadeInLeft wow">
                         <h3 class="title title_fz20 resume__column-title">Образование</h3>
                         <ul>
                             <li>
@@ -200,7 +202,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="resume__column">
+                    <div class="resume__column animate__animated animate__fadeInRight wow">
                         <h3 class="title title_fz20 resume__column-title">Опыт работы</h3>
                         <ul>
                             <li>
@@ -227,47 +229,49 @@
         <!-- start skill section-->
         <section class="skill" id="skill">
             <div class="container">
-                <h2 class="title title_fz18 skill__title">Навыки</h2>
-                <div class="title title_fz36 skill__subtitle">Что я использую в работе</div>
-                <div class="divider"></div>
-
+                <div class="animate__animated animate__fadeInDown wow">
+                    <h2 class="title title_fz18 skill__title">Навыки</h2>
+                    <div class="title title_fz36 skill__subtitle">Что я использую в работе</div>
+                    <div class="divider"></div>
+                </div>
+                
                 <ul class="skill__list">
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="0.3s">
                         <div class="skill__list-img">
                             <img src="icons/skills/html5.svg" alt="HTML5">
                         </div>
                         <h3>HTML5</h3>
                         <p>Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</p>
                     </li>
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="0.6s">
                         <div class="skill__list-img">
                             <img src="icons/skills/css3.svg" alt="CSS3">
                         </div>
                         <h3>CSS3</h3>
                         <p>Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</p>
                     </li>
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="0.9s">
                         <div class="skill__list-img">
                             <img src="icons/skills/js.svg" alt="JavaScript">
                         </div>
                         <h3>Java Script</h3>
                         <p>Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</p>
                     </li>
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="1.2s">
                         <div class="skill__list-img">
                             <img src="icons/skills/jquery.svg" alt="jQuery">
                         </div>
                         <h3>Jquery</h3>
                         <p>Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
                     </li>
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">
                         <div class="skill__list-img">
                             <img src="icons/skills/sass-logo.png" alt="jquery" width="100" height="80">
                         </div>
                         <h3>SASS</h3>
                         <p>Препроцессор SASS придаёт мощь и элегантность обычному CSS коду. SASS даёт возможность использовать переменные, вложенные правила, миксины, инлайновые импорты и многое другое</p>
                     </li>
-                    <li class="skill__list-item">
+                    <li class="skill__list-item animate__animated animate__fadeInUp wow" data-wow-delay="1.8s">
                         <div class="skill__list-img">
                             <img src="icons/skills/BEM-logo.png" alt="" width="80" height="80">
                         </div>
@@ -281,12 +285,15 @@
         <!-- start portfolio section -->
         <section class="portfolio" id="portfolio">
             <div class="container">
-                <h2 class="title title_fz18 portfolio__title">Портфолио</h2>
-                <div class="title title_fz36 portfolio__subtitle">Мои работы</div>
-                <div class="divider"></div>
+                <div class="animate__animated animate__fadeInDown wow">
+                    <h2 class="title title_fz18 portfolio__title">Портфолио</h2>
+                    <div class="title title_fz36 portfolio__subtitle">Мои работы</div>
+                    <div class="divider"></div>
+                </div>
+                
 
                 <div class="portfolio__wrapper">
-                    <a href="http://pc-master-khv.ru" class="portfolio__item">
+                    <a href="http://pc-master-khv.ru" class="portfolio__item animate__animated animate__fadeInLeft wow"">
                         <div class="portfolio__img">
                             <img src="img/works/pc-master.jpg" alt="uber">
                         </div>
@@ -295,7 +302,7 @@
                             <div class="portfolio__containing-descr">Сайт частного хабаровского мастера по ремонту компьютеров</div>
                         </div>
                     </a>
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item animate__animated animate__fadeInDown wow"">
                         <div class="portfolio__img">
                             <img src="img/works/empty.png" alt="uber">
                         </div>
@@ -304,7 +311,7 @@
                             <div class="portfolio__containing-descr">Скоро будет</div>
                         </div>
                     </a>
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item animate__animated animate__fadeInDown wow"">
                         <div class="portfolio__img">
                             <img src="img/works/empty.png" alt="uber">
                         </div>
@@ -313,7 +320,7 @@
                             <div class="portfolio__containing-descr">Скоро будет</div>
                         </div>
                     </a>
-                    <a href="#" class="portfolio__item vertical">
+                    <a href="#" class="portfolio__item vertical animate__animated animate__fadeInRight wow"">
                         <div class="portfolio__img">
                             <img src="img/works/empty-height.png" alt="uber">
                         </div>
@@ -322,7 +329,7 @@
                             <div class="portfolio__containing-descr">Скоро будет</div>
                         </div>
                     </a>
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item animate__animated animate__fadeInLeft wow"">
                         <div class="portfolio__img">
                             <img src="img/works/empty.png" alt="uber">
                         </div>
@@ -331,7 +338,7 @@
                             <div class="portfolio__containing-descr">Скоро будет</div>
                         </div>
                     </a>
-                    <a href="#" class="portfolio__item horizontal">
+                    <a href="#" class="portfolio__item horizontal animate__animated animate__fadeInUp wow"">
                         <div class="portfolio__img">
                             <img src="img/works/empty-width.png" alt="uber">
                         </div>    
@@ -348,10 +355,10 @@
         <section class="contacts" id="contacts"> 
             <div class="container">
                 <div class="contacts__wrapper">
-                    <div class="contacts__photo">
+                    <div class="contacts__photo animate__animated animate__fadeInLeft wow">
                         <img src="img/donel.jpg" alt="photo">
                     </div>
-                    <div class="contacts__descr">
+                    <div class="contacts__descr animate__animated animate__fadeInRight wow">
                         <h2 class="title title_fz18 contacts__title">Контакты</h2>
                         <div class="title title_fz36 contacts__subtitle">Как связаться со мной</div>
                         <div class="divider"></div>
@@ -401,7 +408,11 @@
         </section>
         <!-- end contacts section -->
     </main>
+    <a href="#up" class="pageup">
+        <img src="icons/up-arrow.svg" alt="up">
+    </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
     
     <script>

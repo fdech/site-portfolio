@@ -1,8 +1,8 @@
 <?php
 
-$message = "Имя: {$_POST['name']}<br>"; // добавляем имя в текст
-$message .= "Почта: {$_POST['email']}<br>"; // добавляем телефон в текст
-$message .= "Сообщение: {$_POST['message']}"; // добавляем телефон в текст
+$message = "Имя: {$_POST['name']}<br>"; 
+$message .= "Почта: {$_POST['email']}<br>"; 
+$message .= "Сообщение: {$_POST['message']}"; 
 
 require 'phpmailer/PHPMailerAutoload.php';
 
@@ -17,14 +17,14 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = '465';
 $mail->CharSet = 'UTF-8';
 $mail->From = 'altx21@mail.ru';
-$mail->FromName = 'Андрей';
+$mail->FromName = 'Portfolio';
 $mail->addAddress('altxfdech@gmail.com', 'Александр');
 $mail->isHTML(true);
-$mail->Subject = 'Заказ обратного звонка';
+$mail->Subject = 'Обратная связь';
 $mail->Body = $message;
 
 if( $mail->send() ){
-	echo '<p style="color: green;">Ваше сообщение отправлено</p>';
+	echo '<p style="color: green;">Ваше сообщение успешно отправлено</p>';
 }else{
 	echo '<p style="color: red;">Ошибка!</p>';
 }

@@ -69,3 +69,4 @@ gulp.task('images', function () {
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+
